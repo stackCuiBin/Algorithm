@@ -4,6 +4,7 @@
         "ctime": "cpp",
         "limits": "cpp",
         "streambuf": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "iostream": "cpp"
     }
 }

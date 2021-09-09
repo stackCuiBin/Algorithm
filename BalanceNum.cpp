@@ -4,7 +4,7 @@
  * @Author: Cuibb
  * @Date: 2021-08-04 21:57:26
  * @LastEditors: Cuibb
- * @LastEditTime: 2021-08-04 22:21:14
+ * @LastEditTime: 2021-08-04 23:13:59
  */
 #include <iostream>
 
@@ -12,7 +12,7 @@ using namespace std;
 
 bool checkBalance(int num)
 {
-	int arr[10] = {0};
+	int arr[12] = {0};
 	int len = 0;
 	int base = 10;
 	
@@ -20,7 +20,7 @@ bool checkBalance(int num)
 	
 	arr[0] = num % base;
 	len++;
-	for(int i = base; i <= num; i *= base, len++)
+	for(long i = base; i <= num; i *= base, len++)
 	{
 		int temp = num / i;
 		arr[len] = temp % base;
@@ -46,7 +46,7 @@ int balanceSolution(int num)
 		return -1;
 	}
 
-	for(int i = 11; i <= num; i++)
+	for(int i = 10; i <= num; i++)
 	{
 		if( checkBalance(i) ) sum += i;
 	}
